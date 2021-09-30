@@ -17,7 +17,7 @@ let getHomepage = (req, res) => {
 
             });
 
-            return res.render('test/index.ejs', { dataUser: JSON.stringify(data) })
+            return res.render('index.ejs', { dataUser: data, test: 'abc string test' })
 
         })
 
