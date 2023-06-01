@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale3JP2 CL2KN L, = H=0-9 HU=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <title>Learning Nodejs</title>
 </head>
@@ -19,28 +19,28 @@
     <div class="">
         <table id="customers">
             <tr>
+                <th>ID</th>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Email</th>
-                <th>Address</th>
-                <th>Action</th>
+                <th>Actions</th>
             </tr>
-            <% for(var i=0; i < datausers.length ; i++) {%>
+            <% for(let i=0; i < datausers.length ; i++) {%>
 
                 <tr>
                     <td>
-                        <%= datausers[i].firstName %>
+                        <%= i+1 %>
                     </td>
                     <td>
-                        <%=datausers[i].firstName%>
+                        <%= datausers[i].FirstName %>
                     </td>
                     <td>
-                        <%=datausers[i].email%>
+                        <%= datausers[i].LastName %>
                     </td>
                     <td>
-                        <%=datausers[i].address%>
+                        <a href="users/detail/<%= i+1 %>" target="_blank">Detail</a>
+                        <button type="edit"> Edit</button>
+                        <button type="delete"> Delete</button>
                     </td>
-                    <td>Delete || Edit</td>
                 </tr>
                 <% } %>
         </table>

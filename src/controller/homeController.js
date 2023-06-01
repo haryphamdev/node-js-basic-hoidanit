@@ -10,7 +10,7 @@ let getHomepage = (req, res) => {
             console.log('Connecting to DB ....');
             console.log(results); // results contains rows returned by server
             //data = results;
-            return res.render('index.ejs', { datausers: JSON.stringify(results) })
+            return res.render('index.ejs', { datausers: results })
         }
     );
     //console.log('Here is your Data ....', data.FirstName);
